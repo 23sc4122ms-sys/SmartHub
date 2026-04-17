@@ -9,7 +9,7 @@ COPY public ./public
 COPY vite.config.js postcss.config.js tailwind.config.js ./
 RUN npm run build
 
-FROM php:8.3-cli-bookworm
+FROM php:8.4-cli-bookworm
 WORKDIR /var/www/html
 
 RUN apt-get update \
