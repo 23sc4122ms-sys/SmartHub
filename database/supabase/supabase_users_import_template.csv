@@ -1,0 +1,5 @@
+id,name,email,email_verified_at,password,remember_token,created_at,updated_at
+1,Admin User,admin@smarthub.local,2026-04-17 09:00:00,$2y$12$/CT9NStcc9h79Tpx6e9PNuxEaLZMZmYEbxtOS.b0l/KDAEvpvOIYG,,2026-04-17 09:00:00,2026-04-17 09:00:00
+2,Support Agent,support@smarthub.local,2026-04-17 09:05:00,$2y$12$/CT9NStcc9h79Tpx6e9PNuxEaLZMZmYEbxtOS.b0l/KDAEvpvOIYG,,2026-04-17 09:05:00,2026-04-17 09:05:00
+3,Demo User,demo@smarthub.local,2026-04-17 09:10:00,$2y$12$/CT9NStcc9h79Tpx6e9PNuxEaLZMZmYEbxtOS.b0l/KDAEvpvOIYG,,2026-04-17 09:10:00,2026-04-17 09:10:00
+4,QA Tester,qa@smarthub.local,2026-04-17 09:15:00,$2y$12$/CT9NStcc9h79Tpx6e9PNuxEaLZMZmYEbxtOS.b0l/KDAEvpvOIYG,,2026-04-17 09:15:00,2026-04-17 09:15:00
