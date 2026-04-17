@@ -13,8 +13,8 @@ FROM php:8.3-cli-bookworm
 WORKDIR /var/www/html
 
 RUN apt-get update \
-    && apt-get install -y --no-install-recommends git unzip libpq-dev libzip-dev ca-certificates \
-    && docker-php-ext-install pdo pdo_pgsql zip \
+    && apt-get install -y --no-install-recommends git unzip libpq-dev ca-certificates \
+    && docker-php-ext-install pdo pdo_pgsql \
     && rm -rf /var/lib/apt/lists/*
 
 COPY --from=composer:2 /usr/bin/composer /usr/local/bin/composer
