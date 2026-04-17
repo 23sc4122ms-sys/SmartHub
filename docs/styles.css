@@ -1,0 +1,104 @@
+:root {
+  --bg: #0f172a;
+  --bg-soft: #111827;
+  --card: #0b1220;
+  --text: #e5e7eb;
+  --muted: #94a3b8;
+  --accent: #22d3ee;
+  --accent-2: #38bdf8;
+  --border: rgba(148, 163, 184, 0.25);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at 10% 10%, rgba(34, 211, 238, 0.2), transparent 40%),
+    radial-gradient(circle at 90% 20%, rgba(56, 189, 248, 0.18), transparent 45%),
+    linear-gradient(180deg, var(--bg), #020617);
+  min-height: 100vh;
+}
+
+.wrap {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 32px 18px;
+}
+
+.card {
+  border: 1px solid var(--border);
+  background: linear-gradient(135deg, rgba(11, 18, 32, 0.95), rgba(17, 24, 39, 0.9));
+  border-radius: 18px;
+  padding: 28px;
+  box-shadow: 0 16px 40px rgba(2, 6, 23, 0.55);
+}
+
+.badge {
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(34, 211, 238, 0.55);
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 14px 0 10px;
+  font-size: 34px;
+  line-height: 1.15;
+}
+
+p {
+  margin: 0 0 14px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.actions {
+  margin-top: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  padding: 11px 16px;
+  border-radius: 10px;
+  font-weight: 700;
+  border: 1px solid transparent;
+}
+
+.btn.primary {
+  color: #0b1220;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+}
+
+.btn.secondary {
+  color: var(--text);
+  border-color: var(--border);
+  background: rgba(15, 23, 42, 0.65);
+}
+
+.kv {
+  margin-top: 18px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.kv code {
+  color: #cbd5e1;
+  background: rgba(2, 6, 23, 0.65);
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  border-radius: 8px;
+  padding: 3px 6px;
+}
