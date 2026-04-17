@@ -11,12 +11,7 @@
         <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
             <a href="{{ route('portal.home') }}" class="text-lg font-semibold tracking-wide text-cyan-300">{{ $appName }}</a>
             <nav class="flex items-center gap-3 text-sm">
-                @auth
-                    <a href="{{ route('dashboard') }}" class="rounded-md border border-cyan-400 px-4 py-2 font-medium text-cyan-300 transition hover:bg-cyan-500/10">Dashboard</a>
-                @else
-                    <a href="{{ route('login') }}" class="rounded-md border border-slate-700 px-4 py-2 font-medium text-slate-200 transition hover:border-cyan-400 hover:text-cyan-300">Login</a>
-                    <a href="{{ route('register') }}" class="rounded-md bg-cyan-500 px-4 py-2 font-semibold text-slate-950 transition hover:bg-cyan-400">Register</a>
-                @endauth
+                <a href="{{ route('windows.download') }}" class="rounded-md border border-cyan-400 px-4 py-2 font-medium text-cyan-300 transition hover:bg-cyan-500/10">Download Windows App</a>
             </nav>
         </div>
     </header>
@@ -26,7 +21,7 @@
             <div>
                 <p class="mb-3 inline-flex rounded-full border border-cyan-500/60 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-cyan-300">Latest Desktop Release</p>
                 <h1 class="mb-4 text-4xl font-bold leading-tight">{{ $appName }} <span class="text-cyan-300">{{ $appVersion }}</span></h1>
-                <p class="mb-6 text-slate-300">Secure diagnostics companion for Windows. Download the latest installer and manage your account from one portal.</p>
+                <p class="mb-6 text-slate-300">Secure diagnostics companion for Windows. This website is download-only, while account registration and sign-in happen in the Windows app.</p>
 
                 <div class="flex flex-wrap items-center gap-3">
                     @if($downloadUrl !== '')
@@ -46,13 +41,13 @@
             </div>
 
             <div class="rounded-xl border border-slate-800 bg-slate-900/70 p-6">
-                <h2 class="mb-4 text-lg font-semibold text-cyan-300">Use the same account in desktop app</h2>
-                <p class="mb-4 text-sm text-slate-300">This portal uses Laravel authentication. Your registered users can also log in from your desktop app through API endpoints.</p>
+                <h2 class="mb-4 text-lg font-semibold text-cyan-300">Register directly in the Windows app</h2>
+                <p class="mb-4 text-sm text-slate-300">No web registration is required. Open the SmartHub desktop app, choose register, and create your account there.</p>
                 <ul class="space-y-2 text-sm text-slate-200">
-                    <li><span class="font-semibold text-cyan-300">POST</span> /api/v1/register</li>
-                    <li><span class="font-semibold text-cyan-300">POST</span> /api/v1/login</li>
-                    <li><span class="font-semibold text-cyan-300">GET</span> /api/v1/me</li>
-                    <li><span class="font-semibold text-cyan-300">GET</span> /api/v1/releases/windows-app</li>
+                    <li>Use this portal to download the latest installer.</li>
+                    <li>Create and sign in to your account from the Windows app auth screen.</li>
+                    <li>After first online sign-in, offline mode is supported by the desktop app.</li>
+                    <li>Use release notes here to track new builds.</li>
                 </ul>
                 <p class="mt-4 text-xs text-slate-400">Support: {{ $supportEmail }}</p>
             </div>
@@ -88,7 +83,7 @@
                     <li>Set WINDOWS_APP_DOWNLOAD_URL in .env</li>
                     <li>Run database migrations</li>
                     <li>Enable HTTPS on your host</li>
-                    <li>Test register/login from web and desktop</li>
+                    <li>Test register/login from the Windows app</li>
                 </ul>
             </article>
         </section>
